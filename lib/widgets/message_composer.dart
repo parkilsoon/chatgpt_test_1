@@ -26,7 +26,7 @@ class MessageComposer extends StatelessWidget {
                       controller: _messageController,
                       onSubmitted: onSubmitted,
                       decoration: const InputDecoration(
-                        hintText: 'Write your message here...',
+                        hintText: '궁금증을 적어보세요.',
                         border: InputBorder.none,
                       ),
                     )
@@ -40,7 +40,7 @@ class MessageComposer extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.all(16),
-                          child: Text('Fetching response...'),
+                          child: Text('AI닥터가 답변을 준비중입니다.'),
                         ),
                       ],
                     ),

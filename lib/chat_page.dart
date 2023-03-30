@@ -18,14 +18,14 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage> {
   final _messages = <ChatMessage>[
-    ChatMessage('Hello, how can I help?', false),
+    ChatMessage('건강/시술에 대한 모든 궁금증,AI닥터가 알려드립니다.', false),
   ];
   var _awaitingResponse = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Chat')),
+      appBar: AppBar(title: const Text('AI닥터의 Q&A')),
       body: Column(
         children: [
           Expanded(
@@ -62,7 +62,8 @@ class _ChatPageState extends State<ChatPage> {
       });
     } catch (err) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('An error occurred. Please try again.')),
+        const SnackBar(
+            content: Text('AI닥터가 잠시 급한 환자떄문에 자리를 비웠습니다. 다시 시도해주세요.')),
       );
       setState(() {
         _awaitingResponse = false;
